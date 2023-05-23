@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>CRUD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/img/database_4.png">
+</head>
+<body>
+    <div class="header">
+        <h5>Employee</h5>
+    </div>
+
+    <div class="upper-btn-box">
+        <div class="left-box">
+            <button id="add-btn"><i class="fa fa-plus"></i>&nbsp;Add Employee</button>
+            <button id="add-btn2"><i id="del-all-btn" class="fa fa-eraser"></i> &nbsp;Clear All Data</button>
+            <input type="checkbox" name="" id="del-all-box">
+        </div>
+        <div class="right-box">
+            <i class="fa fa-search"></i>
+            <input type="text" name="" id="empID" placeholder="Enter Employee Id">
+            <button id="add-btn3">Search</button>
+        </div>
+    </div>
+
+    <div class="table-box">
+        <table>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Profile</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>E-mail</th>
+                <th>Mobile No.</th>
+                <th>Job Title</th>
+                <th>Action</th>
+            </tr>
+            <!-- <tr>
+                <td>Hello World</td>
+                <td>Hello World</td>
+                <td>Hello World</td>
+                <td>Hello World</td>
+                <td>Hello World</td>
+                <td>Hello World</td>
+                <td>Hello World</td>
+                <td>Hello World</td>
+                <td>Hello World</td> -->
+                <!-- <td>
+                    <button><i class="fa fa-eye"></i></button>
+                    <button style="background-color: #EE534F;"><i class="fa fa-trash"></i></button>
+                </td>
+            </tr>-->
+            <tbody id="table-data">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal">
+        <i class="fa fa-times-circle close-icon"></i>
+        <div class="left-modal">
+            <div class="img-box">
+                <img src="/img/download.png" id="profile-pic" width="130" height="150" />
+                <!-- <br> -->
+                <i class="fa fa-plus"></i>
+                <input type="file" id="upload-field">
+            </div>
+        </div>
+        <form id="register-form">
+        <div class="right-modal">
+            <div class="input-box">
+                <label for="id">Id :</label>
+                <input type="text" id="id" placeholder="Enter Id" required>
+            </div>
+            <div class="input-box">
+                <label for="Name">First Name :</label>
+                <input type="text" id="Name" placeholder="Enter First Name" required>
+            </div>
+            <div class="input-box">
+                <label for="l-name">Last Name :</label>
+                <input type="text" id="l-name" placeholder="Enter Last Name" required>
+            </div>
+            <div class="input-box">
+                <label for="email">Email :</label>
+                <input type="text" id="email" placeholder="Example@mail.com" required>
+            </div>
+            <div class="input-box">
+                <label for="office-code">Mobile <br> Number :</label>
+                <input type="number" id="office-code" placeholder="Enter Mobile Number" required>
+            </div>
+            <div class="input-box">
+                <label for="job-title">Job Title :</label>
+                <input type="text" id="job-title" placeholder="Job title" required>
+            </div>
+            <div class="input-box">
+                <button id="register-btn">Register</button>
+                <button id="update-btn" disabled style="background-color: #EE534F;">Update</button>
+            </div>
+        </div>
+    </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
